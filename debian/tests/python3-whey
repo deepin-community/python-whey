@@ -1,0 +1,6 @@
+set -e
+
+for py in $(py3versions -s 2>/dev/null);
+    do cd "$AUTOPKGTEST_TMP" ; echo "Testing with $py:" ;
+    $py -c "import whey; print(whey)" ;
+done

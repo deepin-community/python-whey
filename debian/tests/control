@@ -1,0 +1,5 @@
+Tests: python3-whey
+Depends: python3-all,
+         python3-pytest,
+         python3-setuptools,
+         @
