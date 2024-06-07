@@ -1,0 +1,22 @@
+sdist_content:
+- whey-2021.0.0/LICENSE
+- whey-2021.0.0/PKG-INFO
+- whey-2021.0.0/README.rst
+- whey-2021.0.0/pyproject.toml
+- whey-2021.0.0/requirements.txt
+- whey-2021.0.0/whey/__init__.py
+stdout: "Using the following builders:\n    sdist: whey.builder.SDistBuilder\n   \
+  \ wheel: whey.builder.WheelBuilder\n\nBuilding ...\nCopying .../whey/__init__.py\
+  \ -> whey/__init__.py\nWriting whey-2021.0.0.dist-info/LICENSE\nWriting whey-2021.0.0.dist-info/entry_points.txt\n\
+  Writing whey-2021.0.0.dist-info/METADATA\nWriting whey-2021.0.0.dist-info/WHEEL\n\
+  Writing whey-2021.0.0.dist-info/RECORD\nWheel created at .../whey-2021.0.0-py3-none-any.whl\n\
+  Copying .../whey/__init__.py -> whey/__init__.py\nWriting LICENSE\nCopying .../pyproject.toml\
+  \ -> pyproject.toml\nCopying .../requirements.txt -> requirements.txt\nWriting README.rst\n\
+  Writing PKG-INFO\nSource distribution created at .../whey-2021.0.0.tar.gz"
+wheel_content:
+- whey-2021.0.0.dist-info/LICENSE
+- whey-2021.0.0.dist-info/METADATA
+- whey-2021.0.0.dist-info/RECORD
+- whey-2021.0.0.dist-info/WHEEL
+- whey-2021.0.0.dist-info/entry_points.txt
+- whey/__init__.py

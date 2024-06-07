@@ -1,0 +1,11 @@
+sdist_content:
+- whey-2021.0.0/LICENSE
+- whey-2021.0.0/PKG-INFO
+- whey-2021.0.0/README.rst
+- whey-2021.0.0/pyproject.toml
+- whey-2021.0.0/requirements.txt
+- whey-2021.0.0/whey/__init__.py
+stdout: "Using the following builder:\n    sdist: whey.builder.SDistBuilder\n\nBuilding\
+  \ ...\nCopying .../whey/__init__.py -> whey/__init__.py\nWriting LICENSE\nCopying\
+  \ .../pyproject.toml -> pyproject.toml\nCopying .../requirements.txt -> requirements.txt\n\
+  Writing README.rst\nWriting PKG-INFO\nSource distribution created at .../whey-2021.0.0.tar.gz"

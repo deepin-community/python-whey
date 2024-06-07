@@ -1,0 +1,92 @@
+# Configuration for 'repo_helper' (https://github.com/domdfcoding/repo_helper)
+---
+modname: 'whey'
+copyright_years: '2021'
+author: 'Dominic Davis-Foster'
+email: 'dominic@davis-foster.co.uk'
+username: 'repo-helper'
+assignee: 'domdfcoding'
+primary_conda_channel: "domdfcoding"
+version: '0.1.1'
+license: 'MIT'
+short_desc: 'A simple Python wheel builder for simple projects.'
+
+python_deploy_version: 3.8
+min_coverage: 95
+docs_fail_on_warning: true
+sphinx_html_theme: furo
+tox_testenv_extras: all
+on_conda_forge: true
+
+conda_channels:
+ - conda-forge
+
+conda_extras:
+ - none
+
+ # Versions to run tests for
+python_versions:
+ - '3.6'
+ - '3.7'
+ - '3.8'
+ - '3.9'
+ - "3.10"
+ - "3.11"
+ - "3.12"
+ - 3.13-dev
+ - pypy36
+ - pypy37
+ - pypy38
+ - pypy39
+
+sphinx_conf_epilogue:
+ - nitpicky = True
+ - toml_spec_version = "0.5.0"
+ - toctree_plus_types.add("tconf")
+ - toctree_plus_types.add("envvar")
+ - needspace_amount = "4\\baselineskip"
+ - latex_elements["preamble"] = "\\usepackage{multicol}"
+ - tconf_show_full_name = False
+
+console_scripts:
+ - whey = whey.__main__:main
+
+extra_sphinx_extensions:
+ - cli_extension
+ - sphinx_toolbox.more_autosummary.column_widths
+ - sphinx_toolbox_experimental.download_icon
+ - sphinx_packaging
+ - attr_utils.autoattrs
+ - local_extension
+
+classifiers:
+ - 'Development Status :: 3 - Alpha'
+ - 'Environment :: Console'
+ - 'Intended Audience :: Developers'
+ - 'Topic :: Software Development :: Libraries :: Python Modules'
+ - "Topic :: Software Development :: Build Tools"
+ - "Topic :: System :: Archiving :: Packaging"
+
+keywords:
+ - pep517
+ - pep621
+ - build
+ - sdist
+ - wheel
+ - packaging
+ - distribution
+
+entry_points:
+ whey.builder:
+  - "whey_sdist = whey.builder:SDistBuilder"
+  - "whey_wheel = whey.builder:WheelBuilder"
+
+extras_require:
+ readme:
+  - pyproject-parser[readme]>=0.11.0b1
+  - docutils>=0.16
+ editable:
+  - editables>=0.2
+
+exclude_files:
+ - contributing
